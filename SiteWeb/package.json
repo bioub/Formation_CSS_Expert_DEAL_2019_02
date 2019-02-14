@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "http-server": "^0.11.1",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^6.1.1",
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0"
+  },
+  "scripts": {
+    "start": "http-server dist",
+    "start:dev": "live-server src",
+    "build:postcss": "postcss src/css/*.css --use autoprefixer -d dist/css",
+    "lint:css": "stylelint src/css"
+  }
+}

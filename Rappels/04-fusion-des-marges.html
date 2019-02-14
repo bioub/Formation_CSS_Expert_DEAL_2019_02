@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .ellipsis {
+      line-height: 1.2em;
+      height: calc(16px * 1.2 * 3);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ellipsis::after {
+      content: '...';
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p class="ellipsis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla eos expedita sed iure accusamus quisquam necessitatibus. Nisi fugit quod, ad neque doloribus porro, iure quas illum ex itaque, assumenda ipsam.</p>
+    <p>Quo ducimus nesciunt temporibus incidunt explicabo magni doloremque praesentium? Voluptas earum expedita explicabo eaque consequatur ipsam? Laboriosam culpa numquam, velit vero voluptatibus aliquid quas nemo ea reprehenderit suscipit obcaecati quae.</p>
+    <p>Libero eligendi explicabo, vitae alias in veritatis, rerum quibusdam maiores rem quisquam quasi iusto? Voluptas aut voluptatem molestias porro reprehenderit. Veniam doloribus distinctio dignissimos, enim reprehenderit consequatur praesentium necessitatibus id?</p>
+  </div>
+</body>
+</html>
