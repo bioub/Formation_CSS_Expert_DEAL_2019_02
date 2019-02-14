@@ -1,0 +1,112 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fixed Design */
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #51A7F9;
+}
+
+aside {
+  background-color: #F5D328;
+}
+
+.user {
+  background-color: #70BF41;
+}
+
+.link-block {
+  background-color: #F39019;
+}
+
+/* Layout */
+header {
+  position: relative;
+  height: 100px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.user {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.col-container::after {
+  content: "";
+  display: block;
+  clear: left;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+aside .link-block {
+  margin: 8px 0;
+}
+
+aside .link-block a {
+  text-align: center;
+  background-color: yellow;
+  display: block;
+  width: 100%;
+  /* transition-property: background-color;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in; */
+  transition: background-color 400ms ease-in;
+}
+
+aside .link-block a:hover {
+  background-color: red;
+}
+
+main {
+  float: left;
+  width: 70%;
+  padding: 5px;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li + li::before {
+  content: " > ";
+}
+
+.image-container {
+  height: 137px;
+  float: left;
+  width: calc(33.33% - (8px * 2 / 3));
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.image-container:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.image-container img {
+  width: 100%;
+}

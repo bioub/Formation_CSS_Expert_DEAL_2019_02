@@ -12,5 +12,6 @@
     "start:dev": "live-server src",
     "build:postcss": "postcss src/css/*.css --use autoprefixer -d dist/css",
     "lint:css": "stylelint src/css"
-  }
+  },
+  "dependencies": {}
 }
