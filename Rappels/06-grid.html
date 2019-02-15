@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    header {
+      background: orange;
+      grid-area: h;
+    }
+
+    div {
+      background: palegreen;
+      grid-area: d;
+    }
+
+    footer {
+      background: peru;
+      grid-area: f;
+    }
+
+    .container {
+      background: #fff;
+      display: grid;
+      grid-template-areas: "h h h"
+                           "d d d"
+                           "f f f";
+      grid-gap: 8px;
+      gap: 8px;
+    }
+
+    /*
+    h h h
+    d d d
+    f f f
+    */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>h</header>
+    <div>d</div>
+    <div>d</div>
+    <div>d</div>
+    <footer>f</footer>
+  </div>
+</body>
+</html>
