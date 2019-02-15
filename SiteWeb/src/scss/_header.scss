@@ -1,0 +1,16 @@
+header {
+  background-color: $bgHeader;
+  position: relative;
+  grid-area: h;
+
+  h1 {
+    margin: 0;
+  }
+
+  .user {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $bgUser;
+  }
+}

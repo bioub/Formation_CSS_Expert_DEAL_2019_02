@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* autoprefixer grid: autoplace */
 /* Reset CSS */
 * {
   box-sizing: border-box; }
@@ -12,6 +13,57 @@ nav ul {
   margin: 0;
   padding: 0; }
 
+.container {
+  width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "h h" "a m";
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 100px auto; }
+  @media (max-width: 500px) {
+    .container {
+      width: 100%;
+      margin: 0;
+      grid-template-areas: "h" "m" "a";
+      grid-template-columns: 100%;
+      grid-template-rows: 100px auto auto; } }
+
+header {
+  background-color: blue;
+  position: relative;
+  grid-area: h; }
+  header h1 {
+    margin: 0; }
+  header .user {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: green; }
+
+aside {
+  background-color: orange;
+  grid-area: a; }
+  aside .link-block {
+    background-color: #cc8400;
+    margin: 8px 0; }
+    aside .link-block a {
+      text-align: center;
+      background-color: #664200;
+      display: block;
+      width: 100%;
+      transition: background-color 400ms ease-in; }
+      aside .link-block a:hover {
+        background-color: black; }
+
+main  {
+  grid-area: m;
+  padding: 5px; }
+
+.breadcrumb li {
+  display: inline; }
+  .breadcrumb li + li::before {
+    content: " > "; }
+
 .galerie {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -24,92 +76,9 @@ nav ul {
     .galerie {
       grid-template-columns: 100%; } }
 
-/*
-Exercice SASS
-- créer un fichier par "composant" (ex: aside, main, breadcrumb, header, user-menu)
-dans le fichier app.scss ne doit rester que des imports
-
-- imbriquer les règles quand c'est possible
-
-- définir des variables pour chaque couleur de fond (dans le fichier variables)
-*/
-/* autoprefixer grid: autoplace */
-/* Fixed Design */
-.container {
-  width: 800px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas: "h h" "a m";
-  grid-template-columns: 30% 1fr;
-  grid-template-rows: 100px auto; }
-
-header {
-  background-color: #51A7F9;
-  grid-area: h; }
-
-aside {
-  background-color: #F5D328;
-  grid-area: a; }
-
-main  {
-  grid-area: m; }
-
-.user {
-  background-color: #70BF41; }
-
-.link-block {
-  background-color: #F39019; }
-
-/* Layout */
-header {
-  position: relative;
-  /* height: 100px; */ }
-
-header h1 {
-  margin: 0; }
-
-.user {
-  position: absolute;
-  top: 0;
-  right: 0; }
-
 .clearfix::after {
-  content: "";
-  display: block;
-  clear: both; }
-
-aside .link-block {
-  margin: 8px 0; }
-
-aside .link-block a {
-  text-align: center;
-  background-color: yellow;
-  display: block;
-  width: 100%;
-  /* transition-property: background-color;
-  transition-duration: 400ms;
-  transition-timing-function: ease-in; */
-  transition: background-color 400ms ease-in; }
-
-aside .link-block a:hover {
-  background-color: red; }
-
-main {
-  /* flex: 1; */
-  padding: 5px; }
-
-.breadcrumb li {
-  display: inline; }
-
-.breadcrumb li + li::before {
-  content: " > "; }
-
-@media (max-width: 500px) {
-  .container {
-    width: 100%;
-    margin: 0;
-    grid-template-areas: "h" "m" "a";
-    grid-template-columns: 100%;
-    grid-template-rows: 100px auto auto; } }
+  content: "" !important;
+  display: block !important;
+  clear: both !important; }
 
 /*# sourceMappingURL=app.css.map */

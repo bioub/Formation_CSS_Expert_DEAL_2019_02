@@ -1,0 +1,21 @@
+aside {
+  background-color: $bgAside;
+  grid-area: a;
+
+  .link-block {
+    background-color: darken($bgAside, 10%);
+    margin: 8px 0;
+
+    a {
+      text-align: center;
+      background-color: darken($bgAside, 30%);
+      display: block;
+      width: 100%;
+      transition: background-color 400ms ease-in;
+
+      &:hover {
+        background-color: darken($bgAside, 50%);
+      }
+    }
+  }
+}

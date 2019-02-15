@@ -1,0 +1,7 @@
+.breadcrumb li {
+  display: inline;
+
+  & + li::before {
+    content: " > ";
+  }
+}
