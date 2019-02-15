@@ -1,28 +1,7 @@
-@charset "UTF-8";
-/* Reset CSS */
-* {
-  box-sizing: border-box; }
-
-body {
-  margin: 0;
-  user-select: none; }
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-.galerie {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(30px, auto);
-  grid-gap: 8px;
-  gap: 8px; }
-  .galerie .image-container img {
-    width: 100%; }
-  @media (max-width: 500px) {
-    .galerie {
-      grid-template-columns: 100%; } }
+// ITCSS
+// @import 'variables'
+@import 'reset';
+@import 'galerie';
 
 /*
 Exercice SASS
@@ -33,53 +12,69 @@ dans le fichier app.scss ne doit rester que des imports
 
 - définir des variables pour chaque couleur de fond (dans le fichier variables)
 */
+
 /* autoprefixer grid: autoplace */
+
+
 /* Fixed Design */
 .container {
   width: 800px;
   margin: 0 auto;
   display: grid;
-  grid-template-areas: "h h" "a m";
+  grid-template-areas: "h h"
+                       "a m";
   grid-template-columns: 30% 1fr;
-  grid-template-rows: 100px auto; }
+  grid-template-rows: 100px auto;
+}
 
 header {
   background-color: #51A7F9;
-  grid-area: h; }
+  grid-area: h;
+}
 
 aside {
   background-color: #F5D328;
-  grid-area: a; }
+  grid-area: a;
+}
 
-main  {
-  grid-area: m; }
+main {
+  grid-area: m;
+}
 
 .user {
-  background-color: #70BF41; }
+  background-color: #70BF41;
+}
 
 .link-block {
-  background-color: #F39019; }
+  background-color: #F39019;
+}
 
 /* Layout */
 header {
   position: relative;
-  /* height: 100px; */ }
+  /* height: 100px; */
+}
 
 header h1 {
-  margin: 0; }
+  margin: 0;
+}
 
 .user {
   position: absolute;
   top: 0;
-  right: 0; }
+  right: 0;
+}
 
 .clearfix::after {
   content: "";
   display: block;
-  clear: both; }
+  clear: both;
+}
+
 
 aside .link-block {
-  margin: 8px 0; }
+  margin: 8px 0;
+}
 
 aside .link-block a {
   text-align: center;
@@ -89,27 +84,37 @@ aside .link-block a {
   /* transition-property: background-color;
   transition-duration: 400ms;
   transition-timing-function: ease-in; */
-  transition: background-color 400ms ease-in; }
+  transition: background-color 400ms ease-in;
+}
 
 aside .link-block a:hover {
-  background-color: red; }
+  background-color: red;
+}
 
 main {
   /* flex: 1; */
-  padding: 5px; }
+  padding: 5px;
+}
 
 .breadcrumb li {
-  display: inline; }
+  display: inline;
+}
 
 .breadcrumb li + li::before {
-  content: " > "; }
+  content: " > ";
+}
+
+
+
 
 @media (max-width: 500px) {
   .container {
     width: 100%;
     margin: 0;
-    grid-template-areas: "h" "m" "a";
+    grid-template-areas: "h"
+                         "m"
+                         "a";
     grid-template-columns: 100%;
-    grid-template-rows: 100px auto auto; } }
-
-/*# sourceMappingURL=app.css.map */
+    grid-template-rows: 100px auto auto;
+  }
+}
