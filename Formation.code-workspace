@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "SiteWeb"
+		},
+		{
+			"path": "hello-angular"
 		}
 	],
 	"settings": {}

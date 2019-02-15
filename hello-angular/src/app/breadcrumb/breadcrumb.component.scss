@@ -1,0 +1,11 @@
+// @import '../../variables.scss';
+
+// $breadcrumbSeparator: ' > ' !default;
+
+.item {
+  display: inline;
+
+  & + .item::before {
+    content: var(--breadcrumbSeparator, ' > ');
+  }
+}

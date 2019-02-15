@@ -8,13 +8,13 @@ aside {
 
     a {
       text-align: center;
-      background-color: darken($bgAside, 30%);
+      background-color: darken($bgAside, 20%);
       display: block;
       width: 100%;
       transition: background-color 400ms ease-in;
 
       &:hover {
-        background-color: darken($bgAside, 50%);
+        background-color: darken($bgAside, 30%);
       }
     }
   }

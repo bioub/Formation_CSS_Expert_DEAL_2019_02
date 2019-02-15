@@ -1,0 +1,21 @@
+:host {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(30px, auto);
+  grid-gap: 8px;
+  gap: 8px;
+
+  .item {
+    background-color: beige;
+  }
+
+  .item img {
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 100%;
+  }
+}
+
+

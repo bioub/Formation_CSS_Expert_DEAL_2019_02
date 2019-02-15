@@ -29,7 +29,7 @@ nav ul {
       grid-template-rows: 100px auto auto; } }
 
 header {
-  background-color: blue;
+  background-color: red;
   position: relative;
   grid-area: h; }
   header h1 {
@@ -48,12 +48,12 @@ aside {
     margin: 8px 0; }
     aside .link-block a {
       text-align: center;
-      background-color: #664200;
+      background-color: #996300;
       display: block;
       width: 100%;
       transition: background-color 400ms ease-in; }
       aside .link-block a:hover {
-        background-color: black; }
+        background-color: #664200; }
 
 main  {
   grid-area: m;
