@@ -59,8 +59,11 @@ header h1 {
   clear: both;
 }
 
+.col-container {
+  display: flex;
+}
+
 aside {
-  float: left;
   width: 30%;
 }
 
@@ -84,8 +87,7 @@ aside .link-block a:hover {
 }
 
 main {
-  float: left;
-  width: 70%;
+  flex: 1;
   padding: 5px;
 }
 
@@ -97,9 +99,12 @@ main {
   content: " > ";
 }
 
+.galerie {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .image-container {
-  height: 137px;
-  float: left;
   width: calc(33.33% - (8px * 2 / 3));
   margin-right: 8px;
   margin-bottom: 8px;
